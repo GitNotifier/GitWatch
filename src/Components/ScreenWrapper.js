@@ -1,10 +1,16 @@
-import React from "react";
-import styles from "../styles/styles";
+/* eslint-disable react/destructuring-assignment */
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../styles/styles';
 
-export default class ScreenWrapper extends React.Component{
-    render(){
-        return(
-            <div style={styles.screenWrapper}>{this.props.children}</div>
-        )
-    }
+function ScreenWrapper(props) {
+  return (
+    <div style={styles.screenWrapper}>{props.children}</div>
+  );
 }
+
+ScreenWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default ScreenWrapper;
