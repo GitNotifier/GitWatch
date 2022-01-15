@@ -9,8 +9,8 @@ export default class NavBar extends React.Component {
 
   render() {
     return (
-      <div style={styles.navbar}>
-        <img src="Ghost.svg" style={styles.mainLogo} alt="logo" />
+      <div style = {styles.navbar}>
+        <img src = "Ghost.svg" style = {styles.mainLogo} alt = "logo" />
       </div>
     );
   }
