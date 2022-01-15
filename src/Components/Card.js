@@ -4,7 +4,7 @@ import styles from '../styles/styles';
 
 function Card({ children }) {
   return (
-    <div style={styles.card}>
+    <div style = {styles.card}>
       {children}
     </div>
   );
