@@ -6,7 +6,7 @@ import ScreenWrapper from './Components/ScreenWrapper';
 
 function App() {
   return (
-    <div className="App">
+    <div className = "App">
       <NavBar />
       <ScreenWrapper>
         <Card />

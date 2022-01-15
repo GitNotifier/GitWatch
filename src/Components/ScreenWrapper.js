@@ -5,7 +5,7 @@ import styles from '../styles/styles';
 
 function ScreenWrapper(props) {
   return (
-    <div style={styles.screenWrapper}>{props.children}</div>
+    <div style = {styles.screenWrapper}>{props.children}</div>
   );
 }
 
