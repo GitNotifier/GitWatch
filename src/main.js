@@ -8,15 +8,10 @@ const path = require('path');
 const url = require('url');
 
 let mainWindow;
-const startUrl = process.env.ELECTRON_START_URL || url.format({
-    pathname: path.join(__dirname, '/../build/index.html'),
-    protocol: 'file:',
-    slashes: true
-});
+const startUrl = 'http://localhost:5000'
 
 function createWindow() {
-
-    mainWindow = new BrowserWindow({width: CONFIG.WINDOW_WIDTH, height: CONFIG.WINDOW_HEIGHT});
+    mainWindow = new BrowserWindow({width: CONFIG.WINDOW_WIDTH, height: CONFIG.WINDOW_HEIGHT,frame:false,transparent:true});
 
 
     mainWindow.loadURL(startUrl);
