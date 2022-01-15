@@ -1,6 +1,6 @@
 const CONFIG = {
-     WINDOW_HEIGHT : 800,
-    WINDOW_WIDTH : 600
+     WINDOW_HEIGHT : 480,
+    WINDOW_WIDTH : 360
 }
 
 module.exports= CONFIG;

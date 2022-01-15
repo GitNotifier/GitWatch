@@ -1,47 +1,38 @@
-const electron = require('electron');
-const CONFIG = require('../CONFIG.JS')
-const app = electron.app;
+// eslint-disable-next-line import/no-extraneous-dependencies
+import electron from 'electron';
+import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../CONFIG.JS';
 
-const BrowserWindow = electron.BrowserWindow;
+const { app } = electron;
 
-const path = require('path');
-const url = require('url');
+const { BrowserWindow } = electron;
 
 let mainWindow;
-const startUrl = process.env.ELECTRON_START_URL || url.format({
-    pathname: path.join(__dirname, '/../build/index.html'),
-    protocol: 'file:',
-    slashes: true
-});
+const startUrl = 'http://localhost:5000';
 
 function createWindow() {
+  mainWindow = new BrowserWindow({
+    width: WINDOW_WIDTH, height: WINDOW_HEIGHT, frame: false, transparent: true,
+  });
 
-    mainWindow = new BrowserWindow({width: CONFIG.WINDOW_WIDTH, height: CONFIG.WINDOW_HEIGHT});
+  mainWindow.loadURL(startUrl);
 
+  mainWindow.webContents.openDevTools();
 
-    mainWindow.loadURL(startUrl);
-
-
-    mainWindow.webContents.openDevTools();
-
-    mainWindow.on('closed', function () {
-
-        mainWindow = null
-    })
+  mainWindow.on('closed', () => {
+    mainWindow = null;
+  });
 }
-
 
 app.on('ready', createWindow);
 
-app.on('window-all-closed', function () {
-     if (process.platform !== 'darwin') {
-        app.quit()
-    }
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
 });
 
-app.on('activate', function () {
-
-    if (mainWindow === null) {
-        createWindow()
-    }
+app.on('activate', () => {
+  if (mainWindow === null) {
+    createWindow();
+  }
 });
