@@ -1,24 +1,27 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+    extends: 'expensify',
+    parser: 'babel-eslint',
+    ignorePatterns: ['!.*', '.github/actions/**/index.js'],
+    plugins: ['detox'],
+    env: {
+        jest: true,
     },
-    ecmaVersion: 13,
-    sourceType: 'module',
-  },
-  plugins: [
-    'react',
-  ],
-  rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'react/jsx-equals-spacing': [2, 'always'],
-  },
+    settings: {
+        'import/resolver': {
+            node: {
+                extensions: [
+                    '.js',
+                    '.website.js',
+                    '.desktop.js',
+                    '.native.js',
+                    '.ios.js',
+                    '.android.js',
+                    '.config.js',
+                ],
+            },
+        },
+    },
+    globals: {
+        __DEV__: 'readonly',
+    },
 };
