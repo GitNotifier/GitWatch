@@ -3,4 +3,5 @@ const CONFIG = {
     WINDOW_WIDTH : 360
 }
 
+
 module.exports= CONFIG;
