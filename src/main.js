@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import electron from 'electron';
-import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../CONFIG.JS';
+import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../CONFIG.js';
 
 const { app } = electron;
 
