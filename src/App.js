@@ -1,24 +1,11 @@
-import './App.css';
-import React from 'react';
-import Card from './Components/Card';
-import NavBar from './Components/NavBar';
-import ScreenWrapper from './Components/ScreenWrapper';
-
-function App() {
+import React from "react";
+class App extends React.Component {
+  render() {
     return (
-        <div className="App">
-            <NavBar />
-            <ScreenWrapper>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </ScreenWrapper>
-        </div>
+      <div>
+        <h1>Hello World!</h1>
+      </div>
     );
+  }
 }
-
 export default App;
