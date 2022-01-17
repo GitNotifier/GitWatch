@@ -10,7 +10,7 @@
     "react-start": "parcel -p 3000 index.html --dist-dir build",
     "react-build": "parcel build index.html --dist-dir build --public-url ./",
     "electron-build": "electron-builder",
-    "clean-build": "rm -rf build/ .parcel-cache dist/",
+    "clean-build": "rm -rf build/ .parcel-cache/ dist/",
     "build": "npm run clean-build && npm run react-build && npm run electron-build",
     "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron . \"",
     "lint": "eslint . --max-warnings=0"
