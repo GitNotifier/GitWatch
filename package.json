@@ -9,7 +9,8 @@
     "electron-build": "electron-builder",
     "clean-build": "rm -rf build/ .cache dist/",
     "build": "npm run clean-build && npm run react-build && npm run electron-build",
-    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron . \""
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron . \"",
+    "lint": "eslint . --max-warnings=0"
   },
   "repository": {
     "type": "git",
@@ -27,10 +28,20 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
     "electron": "^16.0.7",
     "electron-builder": "^22.14.5",
+    "eslint": "^7.6.0",
+    "eslint-config-expensify": "^2.0.21",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-detox": "^1.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "parcel-bundler": "^1.12.5",
     "wait-on": "^6.0.0"
   },

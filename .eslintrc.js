@@ -1,7 +1,7 @@
 module.exports = {
     extends: 'expensify',
     parser: 'babel-eslint',
-    ignorePatterns: ['!.*', '.github/actions/**/index.js'],
+    ignorePatterns: ['!.*', '.github/actions/**/index.js', 'build/*', 'dist/*'],
     plugins: ['detox'],
     env: {
         jest: true,

@@ -1,0 +1,54 @@
+
+/home/rushat/code/GitWatch/src/App.js
+  1:1   error  Expected 1 empty line after import statement not followed by another import  import/newline-after-import
+  1:19  error  Strings must use singlequote                                                 quotes
+  2:1   error  Component should be written as a pure function                               react/prefer-stateless-function
+  3:1   error  Expected indentation of 4 spaces but found 2                                 indent
+  4:1   error  Expected indentation of 8 spaces but found 4                                 indent
+  5:7   error  Expected indentation of 8 space characters but found 6                       react/jsx-indent
+  6:9   error  Expected indentation of 10 space characters but found 8                      react/jsx-indent
+  8:1   error  Expected indentation of 8 spaces but found 4                                 indent
+  9:1   error  Expected indentation of 4 spaces but found 2                                 indent
+
+/home/rushat/code/GitWatch/src/electron.js
+   1:1   error  Expected 1 empty line after require statement not followed by another require  import/newline-after-import
+   1:26  error  Strings must use singlequote                                                   quotes
+   6:22  error  Strings must use singlequote                                                   quotes
+   7:23  error  Strings must use singlequote                                                   quotes
+  12:1   error  Expected indentation of 4 spaces but found 2                                   indent
+  13:1   error  Expected indentation of 8 spaces but found 4                                   indent
+  14:1   error  Expected indentation of 8 spaces but found 4                                   indent
+  14:16  error  Missing trailing comma                                                         comma-dangle
+  15:1   error  Expected indentation of 4 spaces but found 2                                   indent
+  17:1   error  Expected indentation of 4 spaces but found 2                                   indent
+  18:1   error  Expected indentation of 8 spaces but found 4                                   indent
+  19:1   error  Expected indentation of 12 spaces but found 6                                  indent
+  19:9   error  Strings must use singlequote                                                   quotes
+  20:1   error  Expected indentation of 12 spaces but found 6                                  indent
+  20:40  error  Strings must use singlequote                                                   quotes
+  20:64  error  Missing trailing comma                                                         comma-dangle
+  21:1   error  Expected indentation of 4 spaces but found 2                                   indent
+  22:1   error  Expected indentation of 4 spaces but found 2                                   indent
+  22:17  error  Strings must use singlequote                                                   quotes
+  25:8   error  Strings must use singlequote                                                   quotes
+  27:8   error  Strings must use singlequote                                                   quotes
+  27:35  error  Prefer an early return to a conditionally-wrapped function body                rulesdir/prefer-early-return
+  28:1   error  Expected indentation of 4 spaces but found 2                                   indent
+  28:28  error  Strings must use singlequote                                                   quotes
+  29:1   error  Expected indentation of 8 spaces but found 4                                   indent
+  30:1   error  Expected indentation of 4 spaces but found 2                                   indent
+  33:8   error  Strings must use singlequote                                                   quotes
+  33:26  error  Prefer an early return to a conditionally-wrapped function body                rulesdir/prefer-early-return
+  34:1   error  Expected indentation of 4 spaces but found 2                                   indent
+  35:1   error  Expected indentation of 8 spaces but found 4                                   indent
+  36:1   error  Expected indentation of 4 spaces but found 2                                   indent
+
+/home/rushat/code/GitWatch/src/index.js
+  1:19  error  Strings must use singlequote  quotes
+  2:22  error  Strings must use singlequote  quotes
+  3:17  error  Strings must use singlequote  quotes
+  5:50  error  Strings must use singlequote  quotes
+
+✖ 44 problems (44 errors, 0 warnings)
+  41 errors and 0 warnings potentially fixable with the `--fix` option.
+
