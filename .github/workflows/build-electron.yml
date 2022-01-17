@@ -21,21 +21,26 @@ jobs:
 #       run: npm run build
 #     - name: ls dist/
 #       run: ls ./dist
-#   build_on_win:
-#     runs-on: windows-latest
-#     steps:
-#     - uses: actions/checkout@v2
-#       with:
-#         ref: production
-#     - uses: actions/setup-node@v2
-#       with:
-#         node-version: 14.16
-#     - name: Install dependencies
-#       run: npm ci
-#     - name: Build
-#       run: npm run build
-#     - name: ls dist/
-#       run: ls ./dist
+  build_on_win:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: production
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 14.16
+    - name: Install dependencies
+      run: npm ci
+    - name: Build
+      run: npm run build
+    - name: DIR dist/
+      run: DIR ./dist
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: 0.0.1
+        files: '.\dist\gitwatch Setup 1.0.0.exe'
   build_on_ubuntu:
     runs-on: ubuntu-latest
     steps:
