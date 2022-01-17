@@ -10,7 +10,9 @@
     "react-start": "parcel -p 3000 index.html --dist-dir build",
     "react-build": "parcel build index.html --dist-dir build --public-url ./",
     "electron-build": "electron-builder",
-    "clean-build": "rm -rf build/ .parcel-cache dist/",
+    "clean-build": "run-script-os",
+    "clean-build:win32": "for %d in (.\\build\\ .\\dist\\ .\\.parcel-cache\\) do (if exist \"%d\" rmdir \"%d\" /s /q)",
+    "clean-build:default":"rm -rf ./build/ .parcel-cache/ ./dist/",
     "build": "npm run clean-build && npm run react-build && npm run electron-build",
     "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron . \"",
     "lint": "eslint . --max-warnings=0"
@@ -48,6 +50,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "parcel": "^2.2.0",
+    "run-script-os": "^1.1.6",
     "wait-on": "^6.0.0"
   },
   "build": {
