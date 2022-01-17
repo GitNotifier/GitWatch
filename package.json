@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "GitHub Notification Manager",
   "main": "src/electron.js",
+  "targets": {
+    "main": false
+  },
   "scripts": {
-    "react-start": "parcel -p 3000 index.html --out-dir build",
-    "react-build": "parcel build index.html --out-dir build --public-url ./",
+    "react-start": "parcel -p 3000 index.html --dist-dir build",
+    "react-build": "parcel build index.html --dist-dir build --public-url ./",
     "electron-build": "electron-builder",
     "clean-build": "rm -rf build/ .cache dist/",
     "build": "npm run clean-build && npm run react-build && npm run electron-build",
@@ -17,17 +20,18 @@
     "url": "git+https://github.com/GitNotifier/GitWatch.git"
   },
   "author": "John Doe <john@doe.com>",
-  "license": "MIT",
-  "homepage": "./",
   "bugs": {
     "url": "https://github.com/GitNotifier/GitWatch/issues"
   },
+  "homepage": "./",
+  "license": "MIT",
   "dependencies": {
     "electron-is-dev": "^2.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-window": "^1.8.6"
   },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "concurrently": "^7.0.0",
@@ -43,7 +47,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.2.0",
     "wait-on": "^6.0.0"
   },
   "build": {
