@@ -54,4 +54,5 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
+        tag_name: test_deb
         files: gitwatch_1.0.0_amd64.deb
