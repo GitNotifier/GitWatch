@@ -34,8 +34,8 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
-    - name: ls dist/
-      run: ls ./dist
+    - name: DIR dist/
+      run: DIR ./dist
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
