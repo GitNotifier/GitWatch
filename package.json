@@ -6,6 +6,7 @@
   "targets": {
     "main": false
   },
+  
   "scripts": {
     "react-start": "parcel -p 3000 index.html --dist-dir build",
     "react-build": "parcel build index.html --dist-dir build --public-url ./",
@@ -51,6 +52,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "parcel": "^2.2.0",
+    "parcel-plugin-static-files-copy": "^2.6.0",
     "run-script-os": "^1.1.6",
     "wait-on": "^6.0.0"
   },
