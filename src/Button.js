@@ -1,10 +1,13 @@
 import React from 'react';
-import { writeStorage } from '@rehooks/local-storage';
+import {writeStorage} from '@rehooks/local-storage';
 
 let counter = 0;
 
 const Button = () => (
-    <button onClick={_ => writeStorage('i', ++counter)}>
+    <button
+        onClick={() => writeStorage('i', ++counter)}
+        type="button"
+    >
         Click Me
     </button>
 );

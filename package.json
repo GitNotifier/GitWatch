@@ -6,7 +6,6 @@
   "targets": {
     "main": false
   },
-  
   "scripts": {
     "react-start": "parcel -p 3000 index.html --dist-dir build",
     "react-build": "parcel build index.html --dist-dir build --public-url ./",
