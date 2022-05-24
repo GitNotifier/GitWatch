@@ -7,7 +7,7 @@ const styles = {
         display: 'block',
         width: '100%',
         height: '75px',
-        borderColor: colors.borderblack,
+        borderColor: colors.lightGray,
         borderStyle: 'solid',
         backgroundColor: colors.white,
     },
@@ -22,7 +22,7 @@ const styles = {
         webkitAppRegion: 'drag',
     },
     screenWrapper: {
-        backgroundColor: colors.offwhite,
+        backgroundColor: colors.lightGray,
         maxHeight: '100%',
         overflowY: 'scroll',
         width: '100%',
