@@ -1,9 +1,7 @@
-import React from 'react';
-
-class App extends React.Component {
-    render() {
-        return <div>Hello!</div>;
-    }
-}
-
-export default App;
+export default function App() {
+    return (
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+    )
+  }
